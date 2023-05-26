@@ -1,0 +1,89 @@
+.tile{
+  
+  height: 320px;
+  width: 240px;
+  
+  position: relative;
+  border-radius: 3px;
+}
+.image{
+  border-radius: 2px;
+  margin: auto;
+}
+.titleCard{
+  width: 240px;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 0 0 3px 3px;
+  height: fit-content;
+}
+.title{
+  overflow: hidden;
+  height: 20px;
+  border-bottom: 1px solid black;
+}
+.description{
+  overflow: hidden;
+  height: 20px;
+}
+.mainContainer{
+  margin: auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: 10;
+  grid-gap: 10px;
+  height: fit-content;
+  width: fit-content;
+}
+.price{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+  color: black;
+  border-radius: 0px 3px 0px 3px;
+  font-weight: 700;
+}
+.size{
+  position: absolute;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px 0 3px 0;
+}
+.tile:hover {
+  animation: tileHover .4s 1;
+  animation-fill-mode: forwards;
+}
+.tile:hover .titleCard .description{
+  
+  overflow-wrap: break-word;
+  height: fit-content;
+  
+}
+.tile:hover .titleCard .title{
+  
+  overflow-wrap: break-word;
+  height: fit-content;
+  
+}
+@keyframes tileHover {
+  0%{
+    transform: translate(0, 0);
+  }
+  100%{
+    transform: translate(1%, -1%);
+  }
+}
