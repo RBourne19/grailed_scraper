@@ -1,5 +1,5 @@
 .env
 node_modules
 tsconfig.json
-.map
+index.js.map
 index.js
